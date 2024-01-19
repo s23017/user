@@ -1,5 +1,3 @@
-// pages/users/index.js
-
 import Link from 'next/link'
 import { getAllUserIds, getUserData } from '../../utils/api'
 

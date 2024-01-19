@@ -1,15 +1,18 @@
 import { getUserData } from '../../utils/api'
+import styles from '../../styles/styles.module.css'
 
 const User = ({ user }) => {
   return (
-    <div>
-      <h1>{user.name}</h1>
-      <p>Username: {user.username}</p>
-      <p>Email: {user.email}</p>
-      <p>
-        Address: {user.address.street}, {user.address.suite},{' '}
-        {user.address.city}, {user.address.zipcode}
-      </p>
+    <div className={styles.card}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>{user.name}</h1>
+        <p className={styles.text}>Username: {user.username}</p>
+        <p className={styles.text}>Email: {user.email}</p>
+        <p className={styles.text}>
+          Address: {user.address.street}, {user.address.suite},{' '}
+          {user.address.city}, {user.address.zipcode}
+        </p>
+      </div>
     </div>
   )
 }
